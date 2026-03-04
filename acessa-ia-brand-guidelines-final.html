@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acessa.ia — Brand Guidelines v1.0</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+  :root {
+    --slate-900: #0F1B2D;
+    --slate-700: #254060;
+    --slate-500: #3A6494;
+    --slate-400: #5A83B0;
+    --slate-200: #B8D0E8;
+    --slate-50:  #EEF5FB;
+    --terra-600: #A84F24;
+    --terra-500: #C4622D;
+    --terra-400: #D4784A;
+    --terra-100: #F5DDD0;
+    --paper:     #F5F3EE;
+    --warm-100:  #EDE8DF;
+    --warm-300:  #C4BDB2;
+    --warm-500:  #8C8278;
+    --warm-700:  #4A453F;
+    --ink:       #1A1410;
+    --white:     #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--ink);
+    max-width: 860px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+  }
+
+  /* ——— COVER ——— */
+  .cover {
+    background: var(--slate-900);
+    padding: 72px 56px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(58,100,148,0.4) 0%, transparent 65%);
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: 40%;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196,98,45,0.2) 0%, transparent 65%);
+  }
+
+  .cover-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--terra-400);
+    margin-bottom: 24px;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 6px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover h1 span { color: var(--terra-400); }
+
+  .cover-subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.4);
+    font-weight: 300;
+    margin-bottom: 48px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    z-index: 1;
+  }
+
+  .meta-item label {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.25);
+    margin-bottom: 4px;
+  }
+
+  .meta-item span {
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 500;
+  }
+
+  /* ——— TOC ——— */
+  .toc {
+    background: var(--paper);
+    padding: 36px 56px;
+    border-bottom: 1px solid var(--warm-100);
+  }
+
+  .toc-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--warm-500);
+    margin-bottom: 20px;
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .toc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--ink);
+  }
+
+  .toc-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--terra-500);
+    width: 20px;
+    flex-shrink: 0;
+  }
+
+  /* ——— SECTIONS ——— */
+  .section {
+    padding: 56px 56px 0;
+    margin-bottom: 56px;
+  }
+
+  .section-divider {
+    height: 1px;
+    background: var(--warm-100);
+    margin: 0 56px;
+  }
+
+  .sh {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+
+  .sh-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--terra-500);
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    color: var(--slate-900);
+  }
+
+  .section-intro {
+    font-size: 14px;
+    color: var(--warm-500);
+    line-height: 1.65;
+    margin-top: 8px;
+    margin-bottom: 28px;
+    font-weight: 300;
+    max-width: 560px;
+  }
+
+  /* ——— POSITIONING ——— */
+  .pos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .pos-card {
+    border: 1px solid var(--warm-100);
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--white);
+  }
+
+  .pos-card.highlight {
+    background: var(--slate-50);
+    border-color: var(--slate-200);
+  }
+
+  .pos-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .pos-card.highlight h4 { color: var(--slate-500); }
+  .pos-card:not(.highlight) h4 { color: var(--warm-500); }
+
+  .pos-card p { font-size: 13px; line-height: 1.65; color: var(--ink); }
+
+  .callout {
+    background: var(--slate-50);
+    border: 1px solid var(--slate-200);
+    border-left: 3px solid var(--slate-500);
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--warm-700);
+    margin-top: 16px;
+  }
+
+  .callout.terra {
+    background: var(--terra-100);
+    border-color: var(--terra-400);
+    border-left-color: var(--terra-500);
+    color: var(--warm-700);
+  }
+
+  .callout strong { color: var(--ink); font-weight: 600; }
+
+  /* ——— VOICE ——— */
+  .voice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .voice-card {
+    border: 1px solid var(--warm-100);
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--white);
+  }
+
+  .voice-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--slate-900);
+    margin-bottom: 2px;
+  }
+
+  .voice-tagline {
+    font-size: 12px;
+    color: var(--warm-500);
+    font-style: italic;
+    margin-bottom: 14px;
+  }
+
+  .yes-no {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .yes, .no {
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .yes { background: #DCFCE7; color: #166534; }
+  .no  { background: #FEE2E2; color: #991B1B; }
+  .yes::before { content: '✓ '; font-weight: 700; }
+  .no::before  { content: '✗ '; font-weight: 700; }
+
+  /* ——— COLORS ——— */
+  .color-group { margin-bottom: 24px; }
+
+  .color-group-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 10px;
+  }
+
+  .color-group-label.slate { color: var(--slate-500); }
+  .color-group-label.terra { color: var(--terra-500); }
+  .color-group-label.base  { color: var(--warm-500); }
+
+  .swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 10px;
+  }
+
+  .swatch {
+    border-radius: 9px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .sw-block { height: 64px; }
+
+  .sw-body { padding: 10px 12px; background: var(--white); border-top: 1px solid var(--warm-100); }
+
+  .sw-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .sw-hex {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: var(--warm-500);
+  }
+
+  .sw-use {
+    font-size: 9px;
+    color: var(--warm-500);
+    margin-top: 3px;
+    line-height: 1.4;
+  }
+
+  .color-rule {
+    background: var(--paper);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 13px;
+    color: var(--warm-700);
+    line-height: 1.6;
+    margin-top: 14px;
+  }
+
+  .color-rule strong { color: var(--ink); }
+
+  /* ——— TYPOGRAPHY ——— */
+  .font-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .font-card {
+    border: 1px solid var(--warm-100);
+    border-radius: 10px;
+    padding: 22px;
+    background: var(--white);
+  }
+
+  .font-card-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--warm-500);
+    margin-bottom: 14px;
+  }
+
+  .font-display {
+    font-family: 'Syne', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--slate-900);
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+
+  .font-alphabet {
+    font-size: 13px;
+    color: var(--warm-500);
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .font-meta {
+    padding-top: 14px;
+    border-top: 1px solid var(--warm-100);
+    font-size: 12px;
+    color: var(--warm-500);
+  }
+
+  .font-meta strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 2px; }
+
+  .type-scale {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--warm-100);
+  }
+
+  .type-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 20px;
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--warm-100);
+    background: var(--white);
+    align-items: center;
+  }
+
+  .type-row:last-child { border-bottom: none; }
+  .type-row:nth-child(even) { background: var(--paper); }
+
+  .type-meta {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: var(--warm-500);
+    line-height: 1.8;
+  }
+
+  .type-meta strong {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--slate-700);
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  /* ——— LOGO ——— */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .logo-card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--warm-100);
+  }
+
+  .logo-preview {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .logo-card-label {
+    padding: 12px 16px;
+    border-top: 1px solid var(--warm-100);
+    background: var(--white);
+    font-size: 11px;
+    color: var(--warm-500);
+  }
+
+  .logo-card-label strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .logo-dont-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .logo-rule {
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .logo-rule.do   { background: #F0FDF4; border: 1px solid #BBF7D0; color: #166534; }
+  .logo-rule.dont { background: #FFF1F2; border: 1px solid #FECDD3; color: #9F1239; }
+
+  .logo-rule h5 {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  /* ——— DIGITAL ——— */
+  .digital-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .digital-card {
+    border: 1px solid var(--warm-100);
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--white);
+  }
+
+  .digital-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--slate-900);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .digital-card p {
+    font-size: 12px;
+    color: var(--warm-500);
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .digital-rule {
+    display: flex;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--warm-700);
+    margin-bottom: 5px;
+    align-items: baseline;
+  }
+
+  .digital-rule::before { content: '→'; color: var(--terra-500); font-size: 10px; flex-shrink: 0; }
+
+  /* ——— AVOIDANCE ——— */
+  .avoid-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .avoid-card {
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .avoid-card.bad  { background: #FFF1F2; border: 1px solid #FECDD3; color: #9F1239; }
+  .avoid-card.good { background: #F0FDF4; border: 1px solid #BBF7D0; color: #166534; }
+
+  .avoid-card h5 {
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  /* ——— NEXT STEPS ——— */
+  .steps {
+    display: grid;
+    gap: 10px;
+  }
+
+  .step-item {
+    display: flex;
+    gap: 16px;
+    background: var(--white);
+    border: 1px solid var(--warm-100);
+    border-radius: 10px;
+    padding: 18px 20px;
+    align-items: flex-start;
+  }
+
+  .step-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--terra-500);
+    flex-shrink: 0;
+    width: 28px;
+  }
+
+  .step-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 3px;
+    color: var(--slate-900);
+  }
+
+  .step-desc { font-size: 12px; color: var(--warm-500); line-height: 1.5; }
+
+  @media (max-width: 640px) {
+    .cover { padding: 48px 28px 40px; }
+    .cover h1 { font-size: 40px; }
+    .section { padding: 40px 28px 0; }
+    .section-divider { margin: 0 28px; }
+    .toc { padding: 28px; }
+    .toc-grid, .pos-grid, .voice-grid, .font-pair, .logo-grid, .logo-dont-grid, .digital-grid, .avoid-grid { grid-template-columns: 1fr; }
+    .type-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <span class="cover-tag">Brand Guidelines · Versão 1.0</span>
+  <h1>Acessa<span>.ia</span></h1>
+  <p class="cover-subtitle">Manual de identidade visual e diretrizes de marca</p>
+  <div class="cover-meta">
+    <div class="meta-item"><label>Paleta</label><span>Ardósia + Terracota</span></div>
+    <div class="meta-item"><label>Segmento</label><span>Consultoria de IA para PMEs</span></div>
+    <div class="meta-item"><label>Versão</label><span>1.0 · Março 2025</span></div>
+    <div class="meta-item"><label>Status</label><span>🟢 Ativo</span></div>
+  </div>
+</div>
+
+<!-- TOC -->
+<div class="toc">
+  <div class="toc-title">Conteúdo</div>
+  <div class="toc-grid">
+    <div class="toc-item"><span class="toc-num">01</span>Posicionamento e Propósito</div>
+    <div class="toc-item"><span class="toc-num">02</span>Voz e Tom de Comunicação</div>
+    <div class="toc-item"><span class="toc-num">03</span>Sistema de Cores</div>
+    <div class="toc-item"><span class="toc-num">04</span>Tipografia</div>
+    <div class="toc-item"><span class="toc-num">05</span>Logo e Aplicações</div>
+    <div class="toc-item"><span class="toc-num">06</span>Canais Digitais</div>
+    <div class="toc-item"><span class="toc-num">07</span>O que Evitar</div>
+    <div class="toc-item"><span class="toc-num">08</span>Próximos Passos</div>
+  </div>
+</div>
+
+<!-- 01 POSICIONAMENTO -->
+<div class="section">
+  <div class="sh"><span class="sh-num">01</span></div>
+  <h2>Posicionamento e Propósito</h2>
+  <p class="section-intro">O norte de toda decisão de comunicação e design. Antes de publicar qualquer peça, consulte esta seção.</p>
+
+  <div class="pos-grid">
+    <div class="pos-card highlight">
+      <h4>Missão</h4>
+      <p>Tornar a inteligência artificial acessível e prática para pequenas e médias empresas — sem complexidade, sem jargão, sem consultoria que nunca termina.</p>
+    </div>
+    <div class="pos-card highlight">
+      <h4>Promessa central</h4>
+      <p>Resultado rápido e concreto. Do diagnóstico ao resultado em 2 semanas. Sua equipe usa na semana seguinte à contratação.</p>
+    </div>
+    <div class="pos-card">
+      <h4>Para quem</h4>
+      <p>Donos e gestores de PMEs — varejo, serviços, B2B — que sabem que precisam de IA mas não querem perder tempo com tecnologia. Compram resultado, não solução.</p>
+    </div>
+    <div class="pos-card">
+      <h4>Diferencial</h4>
+      <p>Não vendemos tecnologia. Vendemos resultado. A Acessa.ia traduz o potencial da IA em soluções que o cliente consegue usar amanhã — sem equipe técnica.</p>
+    </div>
+    <div class="pos-card">
+      <h4>Somos</h4>
+      <p>Uma parceira estratégica que fala a língua do negócio. Presença próxima, metodologia clara, entrega rápida.</p>
+    </div>
+    <div class="pos-card">
+      <h4>Não somos</h4>
+      <p>Uma empresa de software. Uma big tech. Uma consultoria genérica que entrega relatório e some. Um serviço caro para grandes empresas.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    💬 <strong>Teste rápido:</strong> Antes de publicar qualquer peça, pergunte: "Isso parece a Acessa.ia ou parece uma startup de tecnologia genérica?" Se parecer genérico — refaça.
+  </div>
+
+  <div class="callout terra" style="margin-top: 10px">
+    🎯 <strong>Personalidade em 5 adjetivos:</strong> Direta · Acolhedora · Confiante · Prática · Humana
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- 02 VOZ E TOM -->
+<div class="section">
+  <div class="sh"><span class="sh-num">02</span></div>
+  <h2>Voz e Tom de Comunicação</h2>
+  <p class="section-intro">A voz é constante — quem somos. O tom varia com o contexto — como falamos dependendo do momento.</p>
+
+  <div class="voice-grid">
+    <div class="voice-card">
+      <h4>Direta</h4>
+      <div class="voice-tagline">"Menos rodeios, mais clareza"</div>
+      <div class="yes-no">
+        <div class="yes">IA que economiza 3h por dia no seu atendimento</div>
+        <div class="no">Soluções inovadoras de IA para otimização de processos</div>
+      </div>
+    </div>
+    <div class="voice-card">
+      <h4>Acolhedora</h4>
+      <div class="voice-tagline">"Nunca faz o cliente se sentir burro"</div>
+      <div class="yes-no">
+        <div class="yes">Não precisa saber programar. A gente configura tudo.</div>
+        <div class="no">A curva de aprendizado da implementação é mínima</div>
+      </div>
+    </div>
+    <div class="voice-card">
+      <h4>Confiante</h4>
+      <div class="voice-tagline">"Sabe o que faz, não precisa gritar"</div>
+      <div class="yes-no">
+        <div class="yes">Nossos clientes economizam em média 12h por semana</div>
+        <div class="no">Somos LÍDERES ABSOLUTOS em IA para PMEs!!! 🚀🚀</div>
+      </div>
+    </div>
+    <div class="voice-card">
+      <h4>Focada em resultado</h4>
+      <div class="voice-tagline">"Sempre sobre impacto real no negócio"</div>
+      <div class="yes-no">
+        <div class="yes">Em 2 semanas sua equipe já usa. Sem enrolação.</div>
+        <div class="no">Através de uma jornada de transformação digital holística...</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top: 20px">
+    ✍️ <strong>Tom por canal:</strong> Redes sociais — próximo, pode usar primeira pessoa. Propostas — preciso e objetivo. E-mails frios — curiosidade + benefício concreto, sem pitch imediato. LinkedIn — autoridade com humanidade.
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- 03 CORES -->
+<div class="section">
+  <div class="sh"><span class="sh-num">03</span></div>
+  <h2>Sistema de Cores</h2>
+  <p class="section-intro">Duas cores com papéis distintos + base neutra quente. A proporção é tão importante quanto as cores em si.</p>
+
+  <div class="color-rule">
+    <strong>Regra de proporção:</strong> Azul-ardósia = ~65% da presença visual (estrutura, textos, seções). Terracota = ~15% (CTAs, destaques, emoção). Neutros quentes = ~20% (fundos, respiro). Se o terracota aparecer em mais de 20% das peças, começa a brigar com o azul.
+  </div>
+
+  <div style="margin-top: 24px">
+    <div class="color-group">
+      <div class="color-group-label slate">Azul-Ardósia — Dominante</div>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="sw-block" style="background:#0F1B2D"></div>
+          <div class="sw-body"><div class="sw-name">Slate 900</div><div class="sw-hex">#0F1B2D</div><div class="sw-use">Navbar, footers, seções dark, texto principal</div></div>
+        </div>
+        <div class="swatch">
+          <div class="sw-block" style="background:#254060"></div>
+          <div class="sw-body"><div class="sw-name">Slate 700</div><div class="sw-hex">#254060</div><div class="sw-use">Seções escuras secundárias, hover slate</div></div>
+        </div>
+        <div class="swatch">
+          <div class="sw-block" style="background:#3A6494"></div>
+          <div class="sw-body"><div class="sw-name">Slate 500 ★</div><div class="sw-hex">#3A6494</div><div class="sw-use">Links, ícones ativos, destaques de texto</div></div>
+        </div>
+        <div class="swatch">
+          <div class="sw-block" style="background:#5A83B0"></div>
+          <div class="sw-body"><div class="sw-name">Slate 400</div><div class="sw-hex">#5A83B0</div><div class="sw-use">Hover de links, ícones secundários</div></div>
+        </div>
+        <div class="swatch">
+          <div class="sw-block" style="background:#B8D0E8"></div>
+          <div class="sw-body"><div class="sw-name">Slate 200</div><div class="sw-hex">#B8D0E8</div><div class="sw-use">Texto sobre fundo escuro</div></div>
+        </div>
+        <div class="swatch">
+          <div class="sw-block" style="background:#EEF5FB; border-bottom: 1px solid #dde8f0"></div>
+          <div class="sw-body"><div class="sw-name">Slate 50</div><div class="sw-hex">#EEF5FB</div><div class="sw-use">Tags, badges, backgrounds suaves</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="color-group">
+      <div class="color-group-label terra">Terracota — Acento de Ação</div>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="sw-block" style="background:#A84F24"></div>
+          <div class="sw-body"><div class="sw-name">Terra 600</div><div class="sw-hex">#A84F24</div><div class="sw-use">Hover do botão CTA</div></div>
+        </div>
+        <div class="swatch">
+          <div class="sw-block" style="background:#C4622D"></div>
+          <div class="sw-body"><div class="sw-name">Terra 500 ★</div><div class="sw-hex">#C4622D</div><div class="sw-use">TODOS os CTAs e botões primários</div></div>
+        </div>
+        <div class="swatch">
+          <div class="sw-block" style="background:#D4784A"></div>
+          <div class="sw-body"><div class="sw-name">Terra 400</div><div class="sw-hex">#D4784A</div><div class="sw-use">Detalhes, logo mark, destaques suaves</div></div>
+        </div>
+        <div class="swatch">
+          <div class="sw-block" style="background:#F5DDD0; border-bottom: 1px solid #e8c4b0"></div>
+          <div class="sw-body"><div class="sw-name">Terra 100</div><div class="sw-hex">#F5DDD0</div><div class="sw-use">Seção de depoimentos, cards quentes</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="color-group">
+      <div class="color-group-label base">Neutros Quentes — Base e Respiro</div>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="sw-block" style="background:#1A1410"></div>
+          <div class="sw-body"><div class="sw-name">Ink</div><div class="sw-hex">#1A1410</div><div class="sw-use">Texto principal em fundo claro</div></div>
+        </div>
+        <div class="swatch">
+          <div class="sw-block" style="background:#4A453F"></div>
+          <div class="sw-body"><div class="sw-name">Warm 700</div><div class="sw-hex">#4A453F</div><div class="sw-use">Subtítulos, texto secundário forte</div></div>
+        </div>
+        <div class="swatch">
+          <div class="sw-block" style="background:#8C8278"></div>
+          <div class="sw-body"><div class="sw-name">Warm 500</div><div class="sw-hex">#8C8278</div><div class="sw-use">Corpo de texto, legendas, metadados</div></div>
+        </div>
+        <div class="swatch">
+          <div class="sw-block" style="background:#C4BDB2"></div>
+          <div class="sw-body"><div class="sw-name">Warm 300</div><div class="sw-hex">#C4BDB2</div><div class="sw-use">Bordas, divisores, inputs desabilitados</div></div>
+        </div>
+        <div class="swatch">
+          <div class="sw-block" style="background:#EDE8DF; border-bottom: 1px solid #ccc5bc"></div>
+          <div class="sw-body"><div class="sw-name">Warm 100</div><div class="sw-hex">#EDE8DF</div><div class="sw-use">Cards neutros, containers</div></div>
+        </div>
+        <div class="swatch">
+          <div class="sw-block" style="background:#F5F3EE; border-bottom: 1px solid #ccc5bc"></div>
+          <div class="sw-body"><div class="sw-name">Paper ★</div><div class="sw-hex">#F5F3EE</div><div class="sw-use">Background principal de todas as páginas</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- 04 TIPOGRAFIA -->
+<div class="section">
+  <div class="sh"><span class="sh-num">04</span></div>
+  <h2>Tipografia</h2>
+  <p class="section-intro">Duas fontes, uma hierarquia clara. Ambas gratuitas no Google Fonts.</p>
+
+  <div class="font-pair">
+    <div class="font-card">
+      <div class="font-card-label">Fonte de Títulos</div>
+      <div class="font-display" style="font-family:'Syne',sans-serif">Acessa.ia</div>
+      <div class="font-alphabet" style="font-family:'Syne',sans-serif;font-weight:400">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 !@#$%&</div>
+      <div class="font-meta"><strong>Syne</strong>Google Fonts · Gratuita · Pesos: 400, 600, 700, 800<br>Uso: todos os títulos, logo, botões, labels</div>
+    </div>
+    <div class="font-card">
+      <div class="font-card-label">Fonte de Texto</div>
+      <div class="font-display" style="font-size:18px;font-weight:500;letter-spacing:0">Inteligência para o seu negócio</div>
+      <div class="font-alphabet">A Acessa.ia traduz o potencial da IA em soluções práticas que a sua equipe consegue usar a partir de amanhã — sem precisar saber programar.</div>
+      <div class="font-meta"><strong>DM Sans</strong>Google Fonts · Gratuita · Pesos: 300, 400, 500<br>Uso: corpo de texto, descrições, legendas</div>
+    </div>
+  </div>
+
+  <div class="type-scale">
+    <div class="type-row">
+      <div class="type-meta"><strong>Display</strong>Syne 800<br>52px / -2px<br>line-h: 1.0</div>
+      <div style="font-family:'Syne',sans-serif;font-size:38px;font-weight:800;letter-spacing:-1.5px;line-height:1.0;color:var(--slate-900)">IA para o seu negócio</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><strong>Heading 1</strong>Syne 800<br>36px / -1px<br>line-h: 1.1</div>
+      <div style="font-family:'Syne',sans-serif;font-size:28px;font-weight:800;letter-spacing:-0.8px;color:var(--slate-900)">Como funciona a consultoria</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><strong>Heading 2</strong>Syne 700<br>24px / -0.5px<br>line-h: 1.2</div>
+      <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:700;letter-spacing:-0.4px;color:var(--slate-900)">Diagnóstico em 5 dias</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><strong>Heading 3</strong>Syne 700<br>18px / 0px<br>line-h: 1.3</div>
+      <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--slate-900)">Automação de atendimento</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><strong>Body Large</strong>DM Sans 300<br>17px / 0<br>line-h: 1.65</div>
+      <div style="font-size:15px;font-weight:300;line-height:1.65;color:var(--warm-500)">Ajudamos PMEs a implementar inteligência artificial de forma prática, sem precisar de equipe técnica própria.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><strong>Body</strong>DM Sans 400<br>15px / 0<br>line-h: 1.6</div>
+      <div style="font-size:14px;line-height:1.6;color:var(--warm-700)">O diagnóstico inicial mapeia os processos com maior potencial de automação e retorno rápido para o negócio.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta"><strong>Label / Caption</strong>DM Sans 500<br>11px / 1.5px<br>Uppercase</div>
+      <div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--warm-500)">Serviços · Método · Cases · Contato</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- 05 LOGO -->
+<div class="section">
+  <div class="sh"><span class="sh-num">05</span></div>
+  <h2>Logo e Aplicações</h2>
+  <p class="section-intro">Enquanto um logo definitivo não é criado, use o logotipo tipográfico abaixo. As regras de uso já valem desde agora.</p>
+
+  <div class="logo-grid">
+    <div class="logo-card">
+      <div class="logo-preview" style="background:var(--paper);color:var(--slate-900);font-family:'Syne',sans-serif">Acessa<span style="color:var(--terra-400)">.</span>ia</div>
+      <div class="logo-card-label"><strong>Versão Principal</strong>Fundo paper ou branco · Uso preferencial</div>
+    </div>
+    <div class="logo-card">
+      <div class="logo-preview" style="background:var(--slate-900);color:var(--paper);font-family:'Syne',sans-serif">Acessa<span style="color:var(--terra-400)">.</span>ia</div>
+      <div class="logo-card-label"><strong>Versão Negativa</strong>Fundo escuro · Navbar, apresentações</div>
+    </div>
+    <div class="logo-card">
+      <div class="logo-preview" style="background:var(--terra-500);color:white;font-family:'Syne',sans-serif">Acessa<span style="color:rgba(255,255,255,0.65)">.</span>ia</div>
+      <div class="logo-card-label"><strong>Versão Acento</strong>Fundo terracota · Uso muito pontual</div>
+    </div>
+    <div class="logo-card">
+      <div class="logo-preview" style="background:white;color:var(--slate-900);font-family:'Syne',sans-serif;filter:grayscale(1)">Acessa.ia</div>
+      <div class="logo-card-label"><strong>Versão Monocromática</strong>Documentos impressos, uso restrito</div>
+    </div>
+  </div>
+
+  <div class="logo-dont-grid">
+    <div class="logo-rule do">
+      <h5>✓ Sempre fazer</h5>
+      Manter proporções ao redimensionar. Respeitar área de proteção (½ altura da letra em todos os lados). Usar sobre fundos com contraste adequado. O ponto final sempre em terracota nas versões coloridas.
+    </div>
+    <div class="logo-rule dont">
+      <h5>✗ Nunca fazer</h5>
+      Esticar ou distorcer. Aplicar sombra, brilho ou efeitos 3D. Recolorir fora das versões aprovadas. Usar sobre fundos com pouco contraste. Usar tamanho menor que 120px de largura em digital.
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- 06 CANAIS DIGITAIS -->
+<div class="section">
+  <div class="sh"><span class="sh-num">06</span></div>
+  <h2>Canais Digitais</h2>
+  <p class="section-intro">Diretrizes específicas para cada canal que a Acessa.ia precisa cobrir.</p>
+
+  <div class="digital-grid">
+    <div class="digital-card">
+      <h4>🌐 Site (Webflow)</h4>
+      <p>Background principal sempre paper #F5F3EE. Navbar em slate 900. CTAs em terracota.</p>
+      <div class="digital-rule">Fonte de título: Syne · Fonte de texto: DM Sans</div>
+      <div class="digital-rule">Botão primário: terra 500 · Botão secundário: outline slate</div>
+      <div class="digital-rule">Máximo 2 cores fortes por seção</div>
+    </div>
+    <div class="digital-card">
+      <h4>📱 Redes Sociais (Canva Pro)</h4>
+      <p>Posts com uma cor protagonista por peça — nunca azul e terracota em pé de igualdade.</p>
+      <div class="digital-rule">Posts informativos: fundo paper + texto slate</div>
+      <div class="digital-rule">Posts de CTA/oferta: fundo terracota ou slate 900</div>
+      <div class="digital-rule">Depoimentos: fundo terra 100 + texto slate 900</div>
+    </div>
+    <div class="digital-card">
+      <h4>💼 LinkedIn</h4>
+      <p>Tom mais formal que Instagram, mas sem perder a personalidade direta da marca.</p>
+      <div class="digital-rule">Capa: slate 900 + wordmark + tagline</div>
+      <div class="digital-rule">Posts: textos longos com parágrafos curtos, sem bullet excessivo</div>
+      <div class="digital-rule">Resultados numéricos em destaque no início do post</div>
+    </div>
+    <div class="digital-card">
+      <h4>⚙️ Produto SaaS (futuro)</h4>
+      <p>Quando o produto existir, slate 500 como cor de interface. Terracota restrito a notificações e alertas positivos.</p>
+      <div class="digital-rule">Background de app: branco puro (#FFFFFF)</div>
+      <div class="digital-rule">Sidebar: slate 900 ou slate 50</div>
+      <div class="digital-rule">Ações primárias: slate 500 · Ações de destaque: terra 500</div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- 07 O QUE EVITAR -->
+<div class="section">
+  <div class="sh"><span class="sh-num">07</span></div>
+  <h2>O que Evitar</h2>
+  <p class="section-intro">Armadilhas comuns de marcas de IA para PMEs. Conhecer é metade do trabalho.</p>
+
+  <div class="avoid-grid">
+    <div class="avoid-card bad">
+      <h5>Visual "cérebro digital"</h5>
+      Ícones de neurônios, circuitos, redes neurais. Todo mundo usa. Ninguém lembra de ninguém. Use ícones de negócio: gráficos, relógios, pessoas, processos.
+    </div>
+    <div class="avoid-card bad">
+      <h5>Excesso de cor terracota</h5>
+      Se o terracota aparecer em mais de 20% da peça, começa a brigar com o azul. Reserve-o para CTAs e momentos de destaque real.
+    </div>
+    <div class="avoid-card bad">
+      <h5>Jargão sem tradução</h5>
+      "LLM", "prompt engineering", "machine learning" — sem contexto, afasta o PME. Sempre traduza para o impacto no negócio do cliente.
+    </div>
+    <div class="avoid-card bad">
+      <h5>Peças poluídas</h5>
+      Uma peça com 3 fontes, 4 cores e 2 CTAs não converte. Escolha uma mensagem por peça, uma cor protagonista, um botão.
+    </div>
+    <div class="avoid-card good">
+      <h5>✓ Em vez disso: resultado em números</h5>
+      "14h economizadas/semana", "2 semanas do diagnóstico ao resultado", "zero equipe técnica necessária". Números concretos vencem qualquer argumento visual.
+    </div>
+    <div class="avoid-card good">
+      <h5>✓ Em vez disso: pessoas reais</h5>
+      Fotos de donos de PME usando o produto, depoimentos com nome e empresa real, processos cotidianos transformados. Humanidade vende mais que tecnologia.
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- 08 PRÓXIMOS PASSOS -->
+<div class="section">
+  <div class="sh"><span class="sh-num">08</span></div>
+  <h2>Próximos Passos</h2>
+  <p class="section-intro">Da teoria à prática — o que fazer nas próximas semanas para o design system ganhar vida.</p>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">S1</div>
+      <div>
+        <div class="step-title">Abrir o Figma e montar a página Foundations</div>
+        <div class="step-desc">Cadastrar todas as cores deste documento como Color Styles. Criar a escala tipográfica como Text Styles. Isso leva ~2h e é a base de tudo.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">S1</div>
+      <div>
+        <div class="step-title">Configurar o Kit de Marca no Canva Pro</div>
+        <div class="step-desc">Cadastrar as cores primárias (slate 500, terra 500, paper) e as fontes (Syne + DM Sans). Criar 3 templates: post feed, story e carrossel.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">S2</div>
+      <div>
+        <div class="step-title">Criar (ou encomendar) o logo definitivo</div>
+        <div class="step-desc">O logotipo tipográfico funciona agora, mas um logo com símbolo próprio vai fortalecer a marca. Briefing: ardósia + terracota, sem neurônios, referência ao "acesso" e à conexão.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">S2</div>
+      <div>
+        <div class="step-title">Montar os primeiros componentes no Figma</div>
+        <div class="step-desc">Botão primário (terra 500), botão secundário (outline slate), card básico, input de formulário. Com Auto Layout em todos.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">S3</div>
+      <div>
+        <div class="step-title">Abrir o Webflow e iniciar o site</div>
+        <div class="step-desc">Com o design system no Figma, o site fica muito mais rápido. Começar pela Home e pela página de serviços — são as que mais convertem.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout terra" style="margin-top: 20px">
+    🏁 <strong>Regra de ouro:</strong> O design system existe para servir o negócio, não o contrário. Monte o mínimo que garante consistência e evolua com a demanda real. Não precisa estar perfeito para começar.
+  </div>
+</div>
+
+</body>
+</html>
